@@ -1,0 +1,28 @@
+{
+  "shopList": [
+    {
+      "name": "asd",
+      "unit": "1",
+      "price": "1",
+      "id": 1
+    },
+    {
+      "name": "et",
+      "unit": "500 gram",
+      "price": "400 tl",
+      "id": 2
+    },
+    {
+      "name": "günlük süt",
+      "unit": "3 tane",
+      "price": "50tl",
+      "id": 3
+    },
+    {
+      "name": "6lı sade soda",
+      "unit": "1",
+      "price": ".",
+      "id": 4
+    }
+  ]
+}
