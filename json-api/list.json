@@ -15,7 +15,7 @@
     {
       "name": "günlük süt",
       "unit": "3 tane",
-      "price": "50tl",
+      "price": "5tl",
       "id": 3
     },
     {
@@ -47,6 +47,24 @@
       "unit": "malatya",
       "price": "44",
       "id": 8
+    },
+    {
+      "name": "j",
+      "unit": "j",
+      "price": "jISTANBUL",
+      "id": 9
+    },
+    {
+      "name": "j",
+      "unit": "j",
+      "price": "x",
+      "id": 10
+    },
+    {
+      "name": "günlük süt",
+      "unit": "3 tane",
+      "price": "12",
+      "id": 11
     }
   ]
 }
