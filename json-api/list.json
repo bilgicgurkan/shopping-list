@@ -1,70 +1,16 @@
 {
   "shopList": [
     {
-      "name": "asd",
-      "unit": "1",
-      "price": "1",
-      "id": 1
-    },
-    {
-      "name": "et",
-      "unit": "500 gram",
-      "price": "400 tl",
-      "id": 2
-    },
-    {
-      "name": "günlük süt",
-      "unit": "3 tane",
-      "price": "5tl",
+      "name": "kıyma",
+      "unit": "2 kilo",
+      "price": "-",
       "id": 3
     },
     {
-      "name": "6lı sade soda",
-      "unit": "1",
+      "name": "nar",
+      "unit": "1 kilo belki 1.5",
       "price": ".",
       "id": 4
-    },
-    {
-      "name": "gurkan",
-      "unit": "gurkan",
-      "price": "gurkan",
-      "id": 5
-    },
-    {
-      "name": "asd",
-      "unit": "asd",
-      "price": "asd",
-      "id": 6
-    },
-    {
-      "name": "2",
-      "unit": "2",
-      "price": "2",
-      "id": 7
-    },
-    {
-      "name": "malatya",
-      "unit": "malatya",
-      "price": "44",
-      "id": 8
-    },
-    {
-      "name": "j",
-      "unit": "j",
-      "price": "jISTANBUL",
-      "id": 9
-    },
-    {
-      "name": "j",
-      "unit": "j",
-      "price": "x",
-      "id": 10
-    },
-    {
-      "name": "günlük süt",
-      "unit": "3 tane",
-      "price": "12",
-      "id": 11
     }
   ]
 }

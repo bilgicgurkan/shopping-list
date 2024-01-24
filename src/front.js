@@ -24,6 +24,7 @@ export class Front {
                 <div class="main-table-area-body-check">
                 <input type="checkbox">
                 <i id="setting-icon" class="fa-solid fa-gear"></i>
+                <i id="delete-icon" class="fa-solid fa-delete-left"></i>
                 </div>
             `
 
@@ -48,12 +49,13 @@ export class Front {
             e.parentElement.previousElementSibling.previousElementSibling.style.color = "#c0bfbf";
         }
     }
+
     textStyleRemove(e) {
         e.parentElement.previousElementSibling.previousElementSibling.style.removeProperty("text-decoration");
         e.parentElement.previousElementSibling.previousElementSibling.style.removeProperty("color");
     }
 
-    changeItem(e){
+    changeItem(e) {
         // console.log(e.parentElement.previousElementSibling.previousElementSibling.previousElementSibling)
         // name alanı
         document.querySelector("#name-input").value = e.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.textContent.trim();
@@ -61,5 +63,18 @@ export class Front {
         document.querySelector("#unit-input").value = e.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.textContent.trim();
         // price alanı
         document.querySelector("#price-input").value = e.parentElement.previousElementSibling.previousElementSibling.textContent.trim();
+    }
+
+    forUpdateButtonGroup(e) {
+        document.querySelector(".save-new").style.display = "block";
+        document.querySelector(".update-input").style.gridTemplateColumns = "50% 50%"
+    }
+
+    changeColor(){
+        document.querySelector("#save-list").style.backgroundColor = "red"
+    }
+
+    itemDeletedFront(e){
+
     }
 }
