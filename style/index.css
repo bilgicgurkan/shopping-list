@@ -46,13 +46,25 @@ body {
     text-align: center;
 }
 
+
 #name-input,
 #unit-input,
 #price-input,
-#save-list {
-    width: 96%;
+#save-list,
+.saveNew {
+    width: 100%;
     padding: 5px;
 }
+
+.update-input{
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+.save-new{
+    display: none;
+}
+
 
 .main-table-area-header {
     border: 1px solid #000;
@@ -72,4 +84,9 @@ body {
     padding: 4px 0 4px 0;
     border-right: 1px solid #d8d8d8;
     border-left: 1px solid #d8d8d8;
+}
+
+.main-table-area-body-check{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
 }
