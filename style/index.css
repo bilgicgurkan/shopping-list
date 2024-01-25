@@ -56,12 +56,13 @@ body {
     padding: 5px;
 }
 
-.update-input{
+.update-input {
     display: grid;
-    grid-template-columns: 100%;
+    /* grid-template-columns: 100%; */
 }
 
-.save-new{
+.save-new,
+.cancel-new {
     display: none;
 }
 
@@ -86,7 +87,7 @@ body {
     border-left: 1px solid #d8d8d8;
 }
 
-.main-table-area-body-check{
+.main-table-area-body-check {
     display: grid;
     grid-template-columns: 33% 33% 33%;
 }

@@ -3,14 +3,44 @@
     {
       "name": "kıyma",
       "unit": "2 kilo",
-      "price": "-",
+      "price": "ab",
       "id": 3
     },
     {
-      "name": "nar",
-      "unit": "1 kilo belki 1.5",
-      "price": ".",
-      "id": 4
+      "name": "sogan",
+      "unit": "1 kilo",
+      "price": "112121",
+      "id": 5
+    },
+    {
+      "name": "1",
+      "unit": "1",
+      "price": "1",
+      "id": 6
+    },
+    {
+      "name": "ten",
+      "unit": "ten",
+      "price": "ten",
+      "id": 9
+    },
+    {
+      "name": "12",
+      "unit": "12",
+      "price": "12",
+      "id": 10
+    },
+    {
+      "name": "13",
+      "unit": "13",
+      "price": "13",
+      "id": 11
+    },
+    {
+      "name": "14",
+      "unit": "14",
+      "price": "14",
+      "id": 12
     }
   ]
 }

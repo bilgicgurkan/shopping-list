@@ -4,7 +4,7 @@ export class Request {
     }
 
     async get() {
-        const response = await fetch(this.url);
+        const response = await fetch(this.url + "?_sort=id,-views");
         const responseData = await response.json();
 
         return responseData;
