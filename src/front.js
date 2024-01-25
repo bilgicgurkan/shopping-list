@@ -67,14 +67,12 @@ export class Front {
 
     forUpdateButtonGroup(e) {
         document.querySelector(".save-new").style.display = "block";
-        document.querySelector(".update-input").style.gridTemplateColumns = "50% 50%"
+        document.querySelector(".cancel-new").style.display = "block";
+        document.querySelector(".update-input").style.gridTemplateColumns = "40% 40% 20%"
     }
 
-    changeColor(){
-        document.querySelector("#save-list").style.backgroundColor = "red"
-    }
+    // itemDeletedFront(e){
 
-    itemDeletedFront(e){
+    // }
 
-    }
 }

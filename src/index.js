@@ -13,6 +13,7 @@ function eventListener() {
     document.querySelector(".main-table-area-body").addEventListener("click", updateItem);
     document.querySelector(".save-new").addEventListener("click", updateListItem);
     document.querySelector(".main-table-area-body").addEventListener("click", deleteItem);
+    document.querySelector(".cancel-new").addEventListener("click", cancelUpdate)
 }
 
 // function loadList() {
@@ -40,8 +41,7 @@ function loadList() {
 function addNewItem() {
     if (
         document.querySelector("#name-input").value.trim() === "" ||
-        document.querySelector("#unit-input").value.trim() === "" ||
-        document.querySelector("#price-input").value.trim() === ""
+        document.querySelector("#unit-input").value.trim() === ""
     ) {
         console.log("burası boş");
     }
@@ -83,13 +83,14 @@ function updateItem(e) {
         if (!updateState) {
             updateState = {
                 updateID: e.target.parentElement.previousElementSibling.textContent.trim(),
-                // updateParent: e.target
+                // updateParent: e.target.parentElement
             }
             console.log(updateState.updateID)
         }
         else {
             updateState = {
-                updateID: e.target.parentElement.previousElementSibling.textContent.trim()
+                updateID: e.target.parentElement.previousElementSibling.textContent.trim(),
+                // updateParent: e.target.parentElement
             }
             console.log(updateState.updateID)
 
@@ -101,7 +102,8 @@ function updateItem(e) {
     // }
 }
 
-function updateListItem() {
+
+function updateListItem(e) {
     if (updateState) {
         const newName = document.querySelector("#name-input").value.trim();
         const newUnit = document.querySelector("#unit-input").value.trim();
@@ -156,9 +158,26 @@ function deleteItem(e) {
                 .then()
                 .catch(err => console.log(err))
         }
-    } else {
-        console.log("kanka")
     }
+}
+
+function cancelUpdate(e) {
+    updateState;
+    console.log(updateState)
+
+    updateState = {
+        updateID: ""
+    }
+
+    console.log(updateState)
+
+    document.querySelector("#name-input").value = "";
+    document.querySelector("#unit-input").value = "";
+    document.querySelector("#price-input").value = "";
+
+    document.querySelector(".save-new").style.display = "none";
+    document.querySelector(".cancel-new").style.display = "none";
+    document.querySelector(".update-input").style.gridTemplateColumns = "100%"
 }
 
 
