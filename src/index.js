@@ -14,15 +14,8 @@ function eventListener() {
     document.querySelector(".save-new").addEventListener("click", updateListItem);
     document.querySelector(".main-table-area-body").addEventListener("click", deleteItem);
     document.querySelector(".cancel-new").addEventListener("click", cancelUpdate)
-}
 
-// function loadList() {
-//     request.get()
-//         .then(allList => {
-//             front.loadAllList(allList);
-//         })
-//         .catch(err => console.log(err))
-// }
+}
 
 function loadList() {
     return new Promise((resolve, reject) => {
@@ -32,7 +25,6 @@ function loadList() {
                 resolve(allList);
             })
             .catch(err => {
-                console.log(err);
                 reject(err);
             });
     });
@@ -43,7 +35,7 @@ function addNewItem() {
         document.querySelector("#name-input").value.trim() === "" ||
         document.querySelector("#unit-input").value.trim() === ""
     ) {
-        console.log("burası boş");
+        front.setAlert("Fill in the all required areas");
     }
     else {
         request.post({
@@ -52,22 +44,22 @@ function addNewItem() {
             price: document.querySelector("#price-input").value.trim()
         })
             .then(addList => {
-                console.log(addList)
+                front.setAlert("Saved as new item");
             })
             .catch(err => console.log(err))
-
-        // console.log(document.querySelector("#name-input").value.trim());
-        // console.log(document.querySelector("#unit-input").value.trim());
-        // console.log(document.querySelector("#price-input").value.trim())
     }
 }
 
 function ifChecked(e) {
     if (e.target.checked === true) {
         front.textStyle(e.target);
+        front.setAlert("marked")
+        front.checkedTrueDisabledTrue(e.target.nextElementSibling)
     }
     if (e.target.checked === false) {
         front.textStyleRemove(e.target);
+        front.setAlert("mark removed")
+        front.checkedFalseDisabledFalse(e.target.nextElementSibling)
     }
 
 }
@@ -79,27 +71,22 @@ function updateItem(e) {
         // changeItem ile ayar ikonuna tıkladığımızda üstteki inputlara gidiyor
         front.changeItem(e.target);
         front.forUpdateButtonGroup(e)
+        front.setAlert("sıra değişiklik için taşındı")
 
         if (!updateState) {
             updateState = {
                 updateID: e.target.parentElement.previousElementSibling.textContent.trim(),
                 // updateParent: e.target.parentElement
             }
-            console.log(updateState.updateID)
         }
         else {
             updateState = {
                 updateID: e.target.parentElement.previousElementSibling.textContent.trim(),
                 // updateParent: e.target.parentElement
             }
-            console.log(updateState.updateID)
 
         }
     }
-    // if (e.target.id === "setting-icon") {
-    //     // front.repeatTextItem(e.target)
-    //     console.log("burası silme işlemi olacak yani üzerini çizme")
-    // }
 }
 
 
@@ -126,7 +113,8 @@ function updateListItem(e) {
 
                 if (!hasChanges) {
                     // Kullanıcı herhangi bir değişiklik yapmadıysa
-                    window.alert(`${updateState.updateID}` + ". sırada zaten var");
+                    // window.alert(`${updateState.updateID}` + ". sırada zaten var");
+                    front.setAlert("Below is the same item.")
                 } else {
                     // Kullanıcı değişiklik yapmışsa
                     const data = {
@@ -153,7 +141,6 @@ function deleteItem(e) {
 
         if (userConfirmed) {
             let deleteItem = e.target.parentElement.previousElementSibling.textContent.trim()
-            console.log(deleteItem)
             request.delete(deleteItem)
                 .then()
                 .catch(err => console.log(err))
@@ -163,13 +150,12 @@ function deleteItem(e) {
 
 function cancelUpdate(e) {
     updateState;
-    console.log(updateState)
 
     updateState = {
         updateID: ""
     }
 
-    console.log(updateState)
+    front.setAlert("Discard all change request")
 
     document.querySelector("#name-input").value = "";
     document.querySelector("#unit-input").value = "";

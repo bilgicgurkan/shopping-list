@@ -1,46 +1,34 @@
 {
   "shopList": [
     {
-      "name": "kıyma",
+      "name": "domates",
       "unit": "2 kilo",
-      "price": "ab",
+      "price": "35TL",
+      "id": 1
+    },
+    {
+      "name": "ekmek",
+      "unit": "2 adet",
+      "price": "",
+      "id": 2
+    },
+    {
+      "name": "diş macunu",
+      "unit": "1 tane",
+      "price": "",
       "id": 3
     },
     {
-      "name": "sogan",
-      "unit": "1 kilo",
-      "price": "112121",
+      "name": "kağıt havlu",
+      "unit": "24'lü",
+      "price": "150tl",
+      "id": 4
+    },
+    {
+      "name": "su",
+      "unit": "5 litre",
+      "price": "20tl",
       "id": 5
-    },
-    {
-      "name": "1",
-      "unit": "1",
-      "price": "1",
-      "id": 6
-    },
-    {
-      "name": "ten",
-      "unit": "ten",
-      "price": "ten",
-      "id": 9
-    },
-    {
-      "name": "12",
-      "unit": "12",
-      "price": "12",
-      "id": 10
-    },
-    {
-      "name": "13",
-      "unit": "13",
-      "price": "13",
-      "id": 11
-    },
-    {
-      "name": "14",
-      "unit": "14",
-      "price": "14",
-      "id": 12
     }
   ]
 }
