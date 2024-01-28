@@ -2,6 +2,7 @@ export class Front {
     // constructor(){
 
     // }
+
     loadAllList(allList) {
         let result = "";
 
@@ -44,15 +45,30 @@ export class Front {
     }
 
     textStyle(e) {
-        if (e.parentElement.previousElementSibling.previousElementSibling.style.textDecoration !== "line-through" || e.parentElement.previousElementSibling.previousElementSibling.style.color !== "#c0bfbf") {
+        if (
+            e.parentElement.previousElementSibling.previousElementSibling.style.textDecoration !== "line-through" ||
+            e.parentElement.previousElementSibling.previousElementSibling.style.color !== "#c0bfbf" ||
+            e.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.style.textDecoration !== "line-through" ||
+            e.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.style.color !== "#c0bfbf" ||
+            e.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.style.textDecoration !== "line-through" ||
+            e.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.style.color !== "#c0bfbf"
+        ) {
             e.parentElement.previousElementSibling.previousElementSibling.style.textDecoration = "line-through";
             e.parentElement.previousElementSibling.previousElementSibling.style.color = "#c0bfbf";
+            e.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.style.textDecoration = "line-through";
+            e.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.style.color = "#c0bfbf";
+            e.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.style.textDecoration = "line-through";
+            e.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.style.color = "#c0bfbf";
         }
     }
 
     textStyleRemove(e) {
         e.parentElement.previousElementSibling.previousElementSibling.style.removeProperty("text-decoration");
         e.parentElement.previousElementSibling.previousElementSibling.style.removeProperty("color");
+        e.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.style.removeProperty("text-decoration");
+        e.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.style.removeProperty("color");
+        e.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.style.removeProperty("text-decoration");
+        e.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.style.removeProperty("color");
     }
 
     changeItem(e) {
@@ -71,8 +87,26 @@ export class Front {
         document.querySelector(".update-input").style.gridTemplateColumns = "40% 40% 20%"
     }
 
-    // itemDeletedFront(e){
+    setAlert(text) {
+        // Belirli bir süre sonra text'i göster
+        setTimeout(() => {
+            document.querySelector(".header-desc-area-for-alert").innerHTML = text;
 
-    // }
+            // Belirli bir süre sonra text'i sil
+            setTimeout(() => {
+                document.querySelector(".header-desc-area-for-alert").innerHTML = "";
+            }, 2000);
+        });
+    }
+
+    checkedTrueDisabledTrue(e) {
+        e.style.cssText = "pointer-events: none; color: rgb(235, 235, 235)";
+        e.nextElementSibling.style.cssText = "pointer-events: none; color: rgb(235, 235, 235)";
+    }
+
+    checkedFalseDisabledFalse(e) {
+        e.style.cssText = "pointer-events: auto; color: #000";
+        e.nextElementSibling.style.cssText = "pointer-events: u; color: #000";
+    }
 
 }
